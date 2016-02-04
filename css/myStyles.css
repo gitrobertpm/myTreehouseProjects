@@ -1,0 +1,641 @@
+/********************************************************
+ STYLES.CSS
+
+ DESIGNED FOR SMALL SCREENS FIRST 
+ STYLES FOR LARGER SCREENS IN RESPONSIVE.CSS 
+ *******************************************************/
+
+
+/*********************************************************
+ MY GENERAL RESETS
+**********************************************************/
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	position: relative;
+	font-family: 'Lato', sans-serif;
+	font-size: 1em;
+	background: rgb(245,245,245);
+}
+
+html, body, header, nav, section, footer, div,
+h1, h2, h3, h4, h5, h6, p, span, button,
+ol, ul, li, q, cite, code, img, a {
+	margin: 0;
+	padding: 0;
+	border-radius: 2px;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+}
+
+a:active, a:focus, a:hover {
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+}
+
+p {
+	color: rgb(50,50,50);
+	cursor: default;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+hr {
+	width: 90%;
+	max-width: 1000px;
+	border-radius: 50%;
+	margin: 25px auto 35px;
+}
+/*** END GENERAL ****************************************/
+
+
+
+
+/*********************************************************
+ HEADER
+**********************************************************/
+header {
+	padding: 10px 15px 25px;
+	/* margin-bottom: 65px; */
+	/* background: linear-gradient(to bottom right, rgb(110,120,110), rgb(100,100,100)); */
+	background: linear-gradient(to bottom right, rgb(20,80,20), rgb(10,70,10));
+	filter: drop-shadow(0px 2px 3px rgba(25,25,25,.5));
+}
+
+.headerInnerWrap {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.myTreehouseLogo {
+	float: right;
+	width: 30%;
+	max-width: 125px;
+	height: auto;
+	padding: 5px;
+	margin-top: 5px;
+	background: rgb(250,250,250);
+	box-shadow: 2px 2px 3px rgba(50,50,50,.5);
+	filter: drop-shadow(2px 2px 5px rgba(50,50,50,.5));
+}
+
+header h1 {
+	font-family: 'Dosis', sans-serif;
+	font-size: 5.5vw;
+	letter-spacing: 4.5px;
+	color: rgb(250,250,250);
+	margin: 10px auto 15px;
+	padding-left: 10px;
+	filter: drop-shadow(4px 4px 5px rgba(75,75,75,.7));
+}
+
+.whoWrap {
+	position: relative;
+	padding: 7px;
+	background: linear-gradient(to bottom right, rgb(70,130,70), rgb(60,120,60));
+	border: 1px solid rgba(50,50,50,0.5);
+	border-Top: 1px solid rgba(150,150,150,.5);
+	box-shadow: 2px 2px 3px rgba(50,50,50,.5);
+}
+
+.whoWrap h2 {
+	font-family: 'Dosis', sans-serif;
+	letter-spacing: .75px;
+	color: rgb(235,245,235);
+}
+
+.whoWrap ul li {
+	margin: 5px auto;
+}
+
+.whoWrap ul li a {
+	color: rgb(62,39,35);
+	font-weight: bold;
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+}
+
+.whoWrap ul li a:active, .whoWrap ul li a:focus, .whoWrap ul li a:hover {
+	color: rgb(245,245,245);
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+}
+
+.linkIcon {
+	width: 20px;
+	height: 20px;
+	margin-left: 2px;
+	margin-right: 10px;
+}
+
+
+/*** END HEADER ******************************************/
+
+
+
+
+/*********************************************************
+ NAV
+**********************************************************/
+.navWrap {
+	max-width: 1250px;
+	margin: 10px auto;
+}
+
+nav {
+	position: absolute;
+	top: 80px;
+	left: 50%;
+	text-align: center;
+	width: 95px;
+	max-width: 1200px;
+	height: 65px;
+	margin: 10px auto 0px;
+	margin-left: -47.5px;
+	padding: 5px;
+	overflow: hidden;
+	z-index: 999;
+}
+
+.openNav {
+	animation: showNav .5s ease forwards; 
+}
+
+@keyframes showNav {
+	0% {width: 95px; height: 65px; top: 80px; left: 50%; margin-left: -50px; background: transparent;}
+	100% {width: 100%; height: 100%; top: -10px; right: 0px; bottom: 0px; left: 0px; margin-left: 0px; background: rgba(50,50,50,.95);}
+}
+
+.closeNav {
+	animation: hideNav .5s ease forwards; 
+}
+
+@keyframes hideNav {
+	0% {width: 100%; height: 100%; top: -10px; right: 0px; bottom: 0px; left: 0px; margin-left: 0px; background: rgba(50,50,50,.95);}
+	100% {width: 95px; height: 65px; top: 80px; left: 50%; margin-left: -50px; background: transparent;}
+}
+
+.burgerWrap {
+	margin-bottom: 25px;
+	cursor: pointer;
+	filter: drop-shadow(0px 3px 2px rgba(50,50,50,.7));
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+}
+
+.burgerWrap:active, .burgerWrap:hover {
+	filter: drop-shadow(2px 5px 3px rgba(50,50,50,.7));
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+}
+
+.burger {
+	width: 60px;
+	height: 10px;
+	margin: 5px auto;
+	border-radius: 10px;
+	border: 2px solid rgb(72,49,45);
+}
+
+.topBun {
+	background: rgb(120,180,120);
+}
+
+.burgerPatty {
+	background: rgb(70,130,70);
+}
+
+.burgerPattyText {
+	font-size: 1.3em;
+	color: rgb(245,245,245);
+	margin-left: 0px;
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+}
+
+.burgerPattyText:active, .burgerPattyText:focus, .burgerPattyText:hover {
+	font-size: 1.5em;
+	filter: drop-shadow(2px 5px 3px rgba(50,50,50,.7));
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+}
+
+.bottomBun {
+	background: rgb(20,80,20);
+}
+
+nav h2 {
+	font-size: 2.25em;
+	color: rgb(120,180,120) !important;
+}
+
+nav p {
+	color: rgb(245,245,245);
+	margin: 10px auto;
+	padding: 10px;
+}
+
+nav ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	padding: 5px;
+	/* border: 2px solid orange; */
+}
+
+nav ul li {
+	font-size: .88em;
+	color: rgb(245,245,245);
+	width: 100px;
+	margin: 10px;
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+}
+
+nav ul li:active, nav ul li:focus, nav ul li:hover {
+	color: rgb(120,180,120);
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+}
+
+.navImg {
+	width: 75px;
+	height: 75px;
+	margin: 10px;
+	cursor: pointer;
+	/* filter: drop-shadow(0px 2px 3px rgba(50,50,50,.7));
+	-webkit-transition-duration: .25s;transition-duration: .25s; */
+}
+
+/* .navImg:active, .navImg:focus, .navImg:hover {
+	filter: drop-shadow(2px 5px 3px rgba(50,50,50,.7));
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+} */
+
+.arrowLeft {
+	float: left;
+	left: 15px;
+	margin-left: 10px;
+	background: url("../img/arrowLeft.png");
+}
+
+.arrowRight {
+	float: right;
+	right: 15px;
+	margin-right: 10px;
+	background: url("../img/arrowRight.png");
+	
+}
+
+.arrow {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	margin-top: -50px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	filter: drop-shadow(0px 2px 2px rgba(50,50,50,.7));
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+	z-index: 9;
+}
+
+.arrow:active, .arrow:focus, .arrow:hover {
+	filter: drop-shadow(2px 5px 3px rgba(50,50,50,.7));
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+}
+
+.arrowFixed {
+	position: fixed;
+	top: 10px;
+	margin-top: 0px;
+}
+
+/*** END NAV *********************************************/
+
+
+/*********************************************************
+ MAIN WRAP
+**********************************************************/
+.primeWrap {
+	position: relative;
+	min-height: 100%;
+}
+
+/* .page-wrap:after {
+  content: "";
+  display: block;
+}
+footer, .page-wrap:after {
+  height: 75px; 
+} */
+
+.mainWrap {
+	position: relative;
+	max-width: 1250px;
+	margin: auto;
+	padding: 15px;
+}
+
+.intro {
+	font-weight: bold;
+	line-height: 1.5em;
+	color: rgb(62,39,35);
+	margin-left: 10px;
+	margin-bottom: 65px;
+}
+
+.intro span {
+	color: rgb(162,139,135);
+}
+
+.projWrap {
+	display: none;
+	padding: 10px;
+	margin: 15px auto 25px;
+	border: 1px solid rgba(50,50,50,0.5);
+	border-Top: 1px solid rgba(150,150,150,.5);
+	box-shadow: 2px 2px 3px rgba(50,50,50,.5);
+}
+
+.showFirstProj {
+	display: block;
+}
+
+.showProjWrap {
+	display: block;
+}
+
+/* .hideProjWrap {
+	display: none;
+} */
+
+
+.projHeadWrap {
+	padding: 10px;
+	background: linear-gradient(to bottom right, rgb(120,180,120), rgb(110,170,110));
+	border: 1px solid rgba(50,50,50,0.5);
+	border-Top: 1px solid rgba(150,150,150,.5);
+	box-shadow: 2px 2px 3px rgba(50,50,50,.5);
+}
+
+.projNameDateWrap h2 {
+	font-family: 'Dosis', sans-serif;
+	color: rgb(235,245,235);
+}
+
+.projFootWrap {
+	/* padding: 10px; */
+}
+
+
+/*********************************************************
+ PROJECT IMAGES
+**********************************************************/
+.lgProjImage {
+	display: none;
+}
+
+.smProjImage {
+	width: 90px;
+	height: 90px;
+	/* margin: 15px; */
+	filter: drop-shadow(0px 2px 3px rgba(50,50,50,.7));
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+}
+
+.smProjImgHover {
+	filter: drop-shadow(2px 7px 5px rgba(50,50,50,.6));
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+}
+
+/* .smProjImage:active, .smProjImage:focus, .smProjImage:hover {
+	filter: drop-shadow(2px 7px 5px rgba(50,50,50,.5));
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+} */
+
+/*********************************************************
+ PROJECT BUTTONS
+**********************************************************/
+.projTrigger {
+	position: relative;
+	display: block;
+	text-align: left;
+	font-weight: bold;
+	font-size: 1em;
+	letter-spacing: 1px;
+	color: rgb(2240,250,240);
+	width: 100%;
+	height: 40px;
+	margin: 15px auto;
+	padding: 10px;
+	background: linear-gradient(to bottom right, rgb(72,49,45), rgb(62,39,35));
+	border: 1px solid rgba(50,50,50,0.5);
+	border-Top: 1px solid rgba(150,150,150,.5);
+	box-shadow: 2px 2px 3px rgba(50,50,50,.5);
+	filter: drop-shadow(0px 2px 3px rgba(50,50,50,.7));
+	cursor: pointer;
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+}
+
+.projTrigger:active, .projTrigger:hover {
+	filter: drop-shadow(2px 7px 4px rgba(50,50,50,.7));
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+}
+
+.projTrigger:focus {
+	color: rgb(120,180,120);
+}
+
+.buttonIcon {
+	width: 20px;
+	height: 20px;
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+	float: right;
+}
+
+.book1, .book2 {
+	display: inline-block;
+	position: absolute;
+	bottom: 10px;
+	width: 20px;
+	height: 5px;
+	background: rgb(245,245,245);
+	border-radius: 2px;
+}
+
+.bookCover1 {
+	right: 12px;
+	bottom: 16px;
+	transform: rotate(135deg);
+}
+
+.bookBack1 {
+	right: 10px;
+}
+
+.projOpen:active > .bookCover1, .projOpen:hover > .bookCover1, .projOpen:focus > .bookCover1 {
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+	animation: openBook .5s ease forwards;
+}
+
+.bookCover2 {
+	right: 12px;
+	bottom: 16px;
+	transform: rotate(135deg);
+}
+
+.bookBack2 {
+	right: 10px;
+}
+
+.projInfo:active > .bookCover2, .projInfo:hover > .bookCover2, .projInfo:focus > .bookCover2 {
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+	animation: openBook .5s ease forwards;
+}
+
+@keyframes openBook {
+	0% {right: 12px; bottom: 16px; transform: rotate(135deg);}
+	50% {bottom: 17px;}
+	100% {right: 25px; bottom: 16px; transform: rotate(45deg);}
+}
+
+.github {
+	
+}
+
+.projCode:active > .github, .projCode:hover > .github, .projCode:focus > .github {
+	-webkit-transition-duration: .25s;transition-duration: .25s;
+	transform: rotate(45deg);
+}
+
+/*********************************************************
+ PROJECT INFO
+**********************************************************/
+.projInfoWrap {
+	width: 100%;
+	/* height: 70px;
+	overflow: hidden; */
+}
+
+.projTechWrap,
+.projDescriptionWrap {
+	position: relative;
+	height: 70px;
+	margin: 10px auto;
+	background: rgb(250,250,250);
+	overflow: hidden;
+	-webkit-transition-duration: .5s;transition-duration: .5s;
+}
+
+.projInfo {
+	font-size: .95em;
+}
+
+.projSectionTitle {
+	font-family: 'Dosis', sans-serif;
+	color: rgb(72,49,45);
+	margin-left: 10px;
+}
+
+.projDescriptionWrap {
+	
+}
+
+.projTechWrap {
+	
+}
+
+.projTechWrap ul {
+	margin: 25px auto;
+}
+
+.projTechWrap ul li {
+	font-weight: bold;
+	color: rgb(70,130,70);
+	margin: 10px auto;
+	margin-left: 10px;
+}
+
+.description {
+	line-height: 1.5em;
+	font-size: 1em;
+	width: 95%;
+	max-width: 250px;
+	margin: 10px auto;
+	margin-left: 10px;
+}
+
+.smiley {
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	-webkit-transform: rotate(90deg);transform: rotate(90deg);
+}
+
+
+/*********************************************************
+ PROJECT ANIMATIONS - CLASSES TOGGLED IN myScripts.js
+**********************************************************/
+.openProjInfo {
+	animation: showProjInfo .5s ease forwards;
+}
+
+@keyframes showProjInfo {
+	0% {height: 70px;}
+	100% {height: 600px;}
+}
+
+.closeProjInfo {
+	animation: hideProjInfo .5s ease forwards;
+}
+
+@keyframes hideProjInfo {
+	0% {height: 600px;}
+	100% {height: 70px;}
+}
+
+/* CLASSES TO CONTROL PROJ INFO EHIGHT AND ANIMATION ON ARROW TRANSITION */
+.keepProjInfoOpen {
+	height: 600px;
+}
+
+.keepProjInfoClosed {
+	height: 70px;
+}
+
+
+/*** END MAIN WRAP ***************************************/
+
+
+/*********************************************************
+ FOOTER
+**********************************************************/
+footer {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 65px;
+	padding: 10px 15px 25px;
+	background: linear-gradient(to bottom right, rgb(20,80,20), rgb(10,70,10));
+	filter: drop-shadow(0px -2px 3px rgba(25,25,25,.5));
+}
+
+footer p {
+	font-size: .88em;
+	color: rgb(245,245,245);
+	max-width: 1200px;
+	margin: auto;
+	padding-left: 20px;
+}
+/*** END FOOTER ******************************************/
+
+
+
+
