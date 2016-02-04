@@ -5,7 +5,6 @@
  STYLES FOR LARGER SCREENS IN RESPONSIVE.CSS 
  *******************************************************/
 
-
 /*********************************************************
  MY GENERAL RESETS
 **********************************************************/
@@ -61,16 +60,13 @@ hr {
 
 
 
-
 /*********************************************************
  HEADER
 **********************************************************/
 header {
 	padding: 10px 15px 25px;
-	/* margin-bottom: 65px; */
-	/* background: linear-gradient(to bottom right, rgb(110,120,110), rgb(100,100,100)); */
-	background: linear-gradient(to bottom right, rgb(20,80,20), rgb(10,70,10));
-	filter: drop-shadow(0px 2px 3px rgba(25,25,25,.5));
+	background: -webkit-linear-gradient(top left, rgb(20,80,20), rgb(10,70,10));background: linear-gradient(to bottom right, rgb(20,80,20), rgb(10,70,10));
+	-webkit-filter: drop-shadow(0px 2px 3px rgba(25,25,25,.5));filter: drop-shadow(0px 2px 3px rgba(25,25,25,.5));
 }
 
 .headerInnerWrap {
@@ -97,13 +93,13 @@ header h1 {
 	color: rgb(250,250,250);
 	margin: 10px auto 15px;
 	padding-left: 10px;
-	filter: drop-shadow(4px 4px 5px rgba(75,75,75,.7));
+	-webkit-filter: drop-shadow(4px 4px 5px rgba(75,75,75,.7));filter: drop-shadow(4px 4px 5px rgba(75,75,75,.7));
 }
 
 .whoWrap {
 	position: relative;
 	padding: 7px;
-	background: linear-gradient(to bottom right, rgb(70,130,70), rgb(60,120,60));
+	background: -webkit-linear-gradient(top left, rgb(70,130,70), rgb(60,120,60));background: linear-gradient(to bottom right, rgb(70,130,70), rgb(60,120,60));
 	border: 1px solid rgba(50,50,50,0.5);
 	border-Top: 1px solid rgba(150,150,150,.5);
 	box-shadow: 2px 2px 3px rgba(50,50,50,.5);
@@ -136,10 +132,7 @@ header h1 {
 	margin-left: 2px;
 	margin-right: 10px;
 }
-
-
 /*** END HEADER ******************************************/
-
 
 
 
@@ -167,16 +160,20 @@ nav {
 }
 
 .openNav {
-	animation: showNav .5s ease forwards; 
+	-webkit-animation: showNav .5s ease forwards;animation: showNav .5s ease forwards; 
 }
 
+@-webkit-keyframes showNav {
+	0% {width: 95px; height: 65px; top: 80px; left: 50%; margin-left: -50px; background: transparent;}
+	100% {width: 100%; height: 100%; top: -10px; right: 0px; bottom: 0px; left: 0px; margin-left: 0px; background: rgba(50,50,50,.95);}
+}
 @keyframes showNav {
 	0% {width: 95px; height: 65px; top: 80px; left: 50%; margin-left: -50px; background: transparent;}
 	100% {width: 100%; height: 100%; top: -10px; right: 0px; bottom: 0px; left: 0px; margin-left: 0px; background: rgba(50,50,50,.95);}
 }
 
 .closeNav {
-	animation: hideNav .5s ease forwards; 
+	-webkit-animation: hideNav .5s ease forwards;animation: hideNav .5s ease forwards; 
 }
 
 @keyframes hideNav {
@@ -187,7 +184,7 @@ nav {
 .burgerWrap {
 	margin-bottom: 25px;
 	cursor: pointer;
-	filter: drop-shadow(0px 3px 2px rgba(50,50,50,.7));
+	-webkit-filter: drop-shadow(0px 3px 2px rgba(50,50,50,.7));filter: drop-shadow(0px 3px 2px rgba(50,50,50,.7));
 	-webkit-transition-duration: .25s;transition-duration: .25s;
 }
 
@@ -241,12 +238,11 @@ nav p {
 }
 
 nav ul{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;
+	-webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;
+	-webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center;
 	width: 100%;
 	padding: 5px;
-	/* border: 2px solid orange; */
 }
 
 nav ul li {
@@ -267,14 +263,7 @@ nav ul li:active, nav ul li:focus, nav ul li:hover {
 	height: 75px;
 	margin: 10px;
 	cursor: pointer;
-	/* filter: drop-shadow(0px 2px 3px rgba(50,50,50,.7));
-	-webkit-transition-duration: .25s;transition-duration: .25s; */
 }
-
-/* .navImg:active, .navImg:focus, .navImg:hover {
-	filter: drop-shadow(2px 5px 3px rgba(50,50,50,.7));
-	-webkit-transition-duration: .25s;transition-duration: .25s;
-} */
 
 .arrowLeft {
 	float: left;
@@ -288,7 +277,6 @@ nav ul li:active, nav ul li:focus, nav ul li:hover {
 	right: 15px;
 	margin-right: 10px;
 	background: url("../img/arrowRight.png");
-	
 }
 
 .arrow {
@@ -300,13 +288,13 @@ nav ul li:active, nav ul li:focus, nav ul li:hover {
 	background-repeat: no-repeat;
 	border: none;
 	cursor: pointer;
-	filter: drop-shadow(0px 2px 2px rgba(50,50,50,.7));
+	-webkit-filter: drop-shadow(0px 2px 2px rgba(50,50,50,.7));filter: drop-shadow(0px 2px 2px rgba(50,50,50,.7));
 	-webkit-transition-duration: .25s;transition-duration: .25s;
 	z-index: 9;
 }
 
 .arrow:active, .arrow:focus, .arrow:hover {
-	filter: drop-shadow(2px 5px 3px rgba(50,50,50,.7));
+	-webkit-filter: drop-shadow(2px 5px 3px rgba(50,50,50,.7));filter: drop-shadow(2px 5px 3px rgba(50,50,50,.7));
 	-webkit-transition-duration: .25s;transition-duration: .25s;
 }
 
@@ -315,8 +303,8 @@ nav ul li:active, nav ul li:focus, nav ul li:hover {
 	top: 10px;
 	margin-top: 0px;
 }
-
 /*** END NAV *********************************************/
+
 
 
 /*********************************************************
@@ -326,14 +314,6 @@ nav ul li:active, nav ul li:focus, nav ul li:hover {
 	position: relative;
 	min-height: 100%;
 }
-
-/* .page-wrap:after {
-  content: "";
-  display: block;
-}
-footer, .page-wrap:after {
-  height: 75px; 
-} */
 
 .mainWrap {
 	position: relative;
@@ -371,14 +351,9 @@ footer, .page-wrap:after {
 	display: block;
 }
 
-/* .hideProjWrap {
-	display: none;
-} */
-
-
 .projHeadWrap {
 	padding: 10px;
-	background: linear-gradient(to bottom right, rgb(120,180,120), rgb(110,170,110));
+	background: -webkit-linear-gradient(top left, rgb(120,180,120), rgb(110,170,110));background: linear-gradient(to bottom right, rgb(120,180,120), rgb(110,170,110));
 	border: 1px solid rgba(50,50,50,0.5);
 	border-Top: 1px solid rgba(150,150,150,.5);
 	box-shadow: 2px 2px 3px rgba(50,50,50,.5);
@@ -388,11 +363,6 @@ footer, .page-wrap:after {
 	font-family: 'Dosis', sans-serif;
 	color: rgb(235,245,235);
 }
-
-.projFootWrap {
-	/* padding: 10px; */
-}
-
 
 /*********************************************************
  PROJECT IMAGES
@@ -404,20 +374,14 @@ footer, .page-wrap:after {
 .smProjImage {
 	width: 90px;
 	height: 90px;
-	/* margin: 15px; */
-	filter: drop-shadow(0px 2px 3px rgba(50,50,50,.7));
+	-webkit-filter: drop-shadow(0px 2px 3px rgba(50,50,50,.7));filter: drop-shadow(0px 2px 3px rgba(50,50,50,.7));
 	-webkit-transition-duration: .25s;transition-duration: .25s;
 }
 
 .smProjImgHover {
-	filter: drop-shadow(2px 7px 5px rgba(50,50,50,.6));
+	-webkit-filter: drop-shadow(2px 7px 5px rgba(50,50,50,.6));filter: drop-shadow(2px 7px 5px rgba(50,50,50,.6));
 	-webkit-transition-duration: .25s;transition-duration: .25s;
 }
-
-/* .smProjImage:active, .smProjImage:focus, .smProjImage:hover {
-	filter: drop-shadow(2px 7px 5px rgba(50,50,50,.5));
-	-webkit-transition-duration: .25s;transition-duration: .25s;
-} */
 
 /*********************************************************
  PROJECT BUTTONS
@@ -434,17 +398,17 @@ footer, .page-wrap:after {
 	height: 40px;
 	margin: 15px auto;
 	padding: 10px;
-	background: linear-gradient(to bottom right, rgb(72,49,45), rgb(62,39,35));
+	background: -webkit-linear-gradient(top left, rgb(72,49,45), rgb(62,39,35));background: linear-gradient(to bottom right, rgb(72,49,45), rgb(62,39,35));
 	border: 1px solid rgba(50,50,50,0.5);
 	border-Top: 1px solid rgba(150,150,150,.5);
 	box-shadow: 2px 2px 3px rgba(50,50,50,.5);
-	filter: drop-shadow(0px 2px 3px rgba(50,50,50,.7));
+	-webkit-filter: drop-shadow(0px 2px 3px rgba(50,50,50,.7));filter: drop-shadow(0px 2px 3px rgba(50,50,50,.7));
 	cursor: pointer;
 	-webkit-transition-duration: .25s;transition-duration: .25s;
 }
 
 .projTrigger:active, .projTrigger:hover {
-	filter: drop-shadow(2px 7px 4px rgba(50,50,50,.7));
+	-webkit-filter: drop-shadow(2px 7px 4px rgba(50,50,50,.7));filter: drop-shadow(2px 7px 4px rgba(50,50,50,.7));
 	-webkit-transition-duration: .25s;transition-duration: .25s;
 }
 
@@ -472,7 +436,7 @@ footer, .page-wrap:after {
 .bookCover1 {
 	right: 12px;
 	bottom: 16px;
-	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);transform: rotate(135deg);
 }
 
 .bookBack1 {
@@ -481,13 +445,13 @@ footer, .page-wrap:after {
 
 .projOpen:active > .bookCover1, .projOpen:hover > .bookCover1, .projOpen:focus > .bookCover1 {
 	-webkit-transition-duration: .25s;transition-duration: .25s;
-	animation: openBook .5s ease forwards;
+	-webkit-animation: openBook .5s ease forwards;animation: openBook .5s ease forwards;
 }
 
 .bookCover2 {
 	right: 12px;
 	bottom: 16px;
-	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);transform: rotate(135deg);
 }
 
 .bookBack2 {
@@ -496,22 +460,23 @@ footer, .page-wrap:after {
 
 .projInfo:active > .bookCover2, .projInfo:hover > .bookCover2, .projInfo:focus > .bookCover2 {
 	-webkit-transition-duration: .25s;transition-duration: .25s;
-	animation: openBook .5s ease forwards;
+	-webkit-animation: openBook .5s ease forwards;animation: openBook .5s ease forwards;
 }
 
-@keyframes openBook {
-	0% {right: 12px; bottom: 16px; transform: rotate(135deg);}
+@-webkit-keyframes openBook {
+	0% {right: 12px; bottom: 16px; -webkit-transform: rotate(135deg); transform: rotate(135deg);}
 	50% {bottom: 17px;}
-	100% {right: 25px; bottom: 16px; transform: rotate(45deg);}
+	100% {right: 25px; bottom: 16px; -webkit-transform: rotate(45deg); transform: rotate(45deg);}
 }
-
-.github {
-	
+@keyframes openBook {
+	0% {right: 12px; bottom: 16px; -webkit-transform: rotate(135deg); transform: rotate(135deg);}
+	50% {bottom: 17px;}
+	100% {right: 25px; bottom: 16px; -webkit-transform: rotate(45deg); transform: rotate(45deg);}
 }
 
 .projCode:active > .github, .projCode:hover > .github, .projCode:focus > .github {
 	-webkit-transition-duration: .25s;transition-duration: .25s;
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);transform: rotate(45deg);
 }
 
 /*********************************************************
@@ -519,8 +484,6 @@ footer, .page-wrap:after {
 **********************************************************/
 .projInfoWrap {
 	width: 100%;
-	/* height: 70px;
-	overflow: hidden; */
 }
 
 .projTechWrap,
@@ -528,7 +491,7 @@ footer, .page-wrap:after {
 	position: relative;
 	height: 70px;
 	margin: 10px auto;
-	background: rgb(250,250,250);
+	background: rgb(247,247,247);
 	overflow: hidden;
 	-webkit-transition-duration: .5s;transition-duration: .5s;
 }
@@ -541,14 +504,6 @@ footer, .page-wrap:after {
 	font-family: 'Dosis', sans-serif;
 	color: rgb(72,49,45);
 	margin-left: 10px;
-}
-
-.projDescriptionWrap {
-	
-}
-
-.projTechWrap {
-	
 }
 
 .projTechWrap ul {
@@ -578,29 +533,36 @@ footer, .page-wrap:after {
 	-webkit-transform: rotate(90deg);transform: rotate(90deg);
 }
 
-
 /*********************************************************
  PROJECT ANIMATIONS - CLASSES TOGGLED IN myScripts.js
 **********************************************************/
 .openProjInfo {
-	animation: showProjInfo .5s ease forwards;
+	-webkit-animation: showProjInfo .5s ease forwards;animation: showProjInfo .5s ease forwards;
 }
 
+@-webkit-keyframes showProjInfo {
+	0% {height: 70px;}
+	100% {height: 600px;}
+}
 @keyframes showProjInfo {
 	0% {height: 70px;}
 	100% {height: 600px;}
 }
 
 .closeProjInfo {
-	animation: hideProjInfo .5s ease forwards;
+	-webkit-animation: hideProjInfo .5s ease forwards;animation: hideProjInfo .5s ease forwards;
 }
 
+@-webkit-keyframes hideProjInfo {
+	0% {height: 600px;}
+	100% {height: 70px;}
+}
 @keyframes hideProjInfo {
 	0% {height: 600px;}
 	100% {height: 70px;}
 }
 
-/* CLASSES TO CONTROL PROJ INFO EHIGHT AND ANIMATION ON ARROW TRANSITION */
+/* CLASSES TO CONTROL PROJ INFO HEIGHT AND ANIMATION ON ARROW TRANSITION */
 .keepProjInfoOpen {
 	height: 600px;
 }
@@ -608,9 +570,8 @@ footer, .page-wrap:after {
 .keepProjInfoClosed {
 	height: 70px;
 }
-
-
 /*** END MAIN WRAP ***************************************/
+
 
 
 /*********************************************************
@@ -623,8 +584,8 @@ footer {
 	width: 100%;
 	height: 65px;
 	padding: 10px 15px 25px;
-	background: linear-gradient(to bottom right, rgb(20,80,20), rgb(10,70,10));
-	filter: drop-shadow(0px -2px 3px rgba(25,25,25,.5));
+	background: -webkit-linear-gradient(top left, rgb(20,80,20), rgb(10,70,10));background: linear-gradient(to bottom right, rgb(20,80,20), rgb(10,70,10));
+	-webkit-filter: drop-shadow(0px -2px 3px rgba(25,25,25,.5));filter: drop-shadow(0px -2px 3px rgba(25,25,25,.5));
 }
 
 footer p {
@@ -635,7 +596,3 @@ footer p {
 	padding-left: 20px;
 }
 /*** END FOOTER ******************************************/
-
-
-
-
