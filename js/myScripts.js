@@ -139,9 +139,10 @@ var myTreehouseProjects = function() {
 
 		// LEFT ARROW
 		arrowLeft.onclick = function() {
+			
 		
-		// HIDE INITIAL PROJ
-		projWrap[0].classList.toggle("showFirstProj", false);
+			// HIDE INITIAL PROJ
+			projWrap[0].classList.toggle("showFirstProj", false);
 		
 			if (descriptionOn) {
 				for (var i = 0; i < projWrap.length; i++) {
@@ -159,17 +160,29 @@ var myTreehouseProjects = function() {
 				counter = projWrap.length - 1;
 				projWrap[0].classList.toggle("showProjWrap", false);
 				projWrap[counter].classList.toggle("showProjWrap", true);
+				
+				// HANDLE FOCUS STATE FOR CURRENT PROJ INFO BUTTON
+				if (descriptionOn) {
+					projInfo[0].blur();
+					projInfo[counter].focus();
+				}	
 			} else {
 				counter -= 1;
 				projWrap[counter + 1].classList.toggle("showProjWrap", false);
 				projWrap[counter].classList.toggle("showProjWrap", true);
+				
+				// HANDLE FOCUS STATE FOR CURRENT PROJ INFO BUTTON
+				if (descriptionOn) {
+					projInfo[counter + 1].blur();
+					projInfo[counter].focus();
+				}
 			}
 		};
 
 		arrowRight.onclick = function() {
 		
-		// HIDE INITIAL PROJ		
-		projWrap[0].classList.toggle("showFirstProj", false);
+			// HIDE INITIAL PROJ		
+			projWrap[0].classList.toggle("showFirstProj", false);
 			
 			if (descriptionOn) {
 				for (var i = 0; i < projWrap.length; i++) {
@@ -187,10 +200,22 @@ var myTreehouseProjects = function() {
 				counter = 0;
 				projWrap[projWrap.length - 1].classList.toggle("showProjWrap", false);
 				projWrap[counter].classList.toggle("showProjWrap", true);
+				
+				// HANDLE FOCUS STATE FOR CURRENT PROJ INFO BUTTON
+				if (descriptionOn) {
+					projInfo[projWrap.length - 1].blur();
+					projInfo[counter].focus();
+				}
 			} else {
 				counter += 1;
 				projWrap[counter - 1].classList.toggle("showProjWrap", false);
 				projWrap[counter].classList.toggle("showProjWrap", true);
+				
+				// HANDLE FOCUS STATE FOR CURRENT PROJ INFO BUTTON
+				if (descriptionOn) {
+					projInfo[counter - 1].blur();
+					projInfo[counter].focus();
+				}
 			}
 		};
 	};
