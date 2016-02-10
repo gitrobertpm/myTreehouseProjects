@@ -233,6 +233,7 @@
 	.projSectionTitle {
 		font-size: 1.75em;
 		margin-top: 15px;
+		cursor: pointer;
 	}
 	
 	.projInfo {
@@ -383,11 +384,13 @@
 	}
 	
 	.arrowFixed:nth-of-type(1) {
-		margin-left: -575px;
+		margin-left: -595px;
+		left: 50%;
 	}
 	
 	.arrowFixed:nth-of-type(2) {
 		margin-left: 550px;
+		right: auto;
 	}
 	/*** END NAV *********************************************/
 }
