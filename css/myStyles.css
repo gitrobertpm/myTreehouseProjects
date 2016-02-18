@@ -501,8 +501,10 @@ nav ul li:active, nav ul li:focus, nav ul li:hover {
 .projTechWrap,
 .projDescriptionWrap {
 	position: relative;
-	height: 70px;
+	max-height: 70px;
+    -webkit-transition: max-height 0.5s ease;transition: max-height 0.5s ease;
 	margin: 10px auto;
+	padding-bottom: 20px;
 	background: rgb(247,247,247);
 	overflow: hidden;
 	-webkit-transition-duration: .5s;transition-duration: .5s;
@@ -538,6 +540,14 @@ nav ul li:active, nav ul li:focus, nav ul li:hover {
 	margin-left: 10px;
 }
 
+.description a {
+	color: rgb(110,170,110);
+}
+
+.description a:hover {
+	color: rgb(50,110,50);
+}
+
 .smiley {
 	display: inline-block;
 	margin-left: 10px;
@@ -549,38 +559,22 @@ nav ul li:active, nav ul li:focus, nav ul li:hover {
  PROJECT ANIMATIONS - CLASSES TOGGLED IN myScripts.js
 **********************************************************/
 .openProjInfo {
-	-webkit-animation: showProjInfo .5s ease forwards;animation: showProjInfo .5s ease forwards;
-}
-
-@-webkit-keyframes showProjInfo {
-	0% {height: 70px;}
-	100% {height: 600px;}
-}
-@keyframes showProjInfo {
-	0% {height: 70px;}
-	100% {height: 600px;}
+	max-height: 1000px;
+    -webkit-transition: max-height 0.5s ease;transition: max-height 0.5s ease;
 }
 
 .closeProjInfo {
-	-webkit-animation: hideProjInfo .5s ease forwards;animation: hideProjInfo .5s ease forwards;
-}
-
-@-webkit-keyframes hideProjInfo {
-	0% {height: 600px;}
-	100% {height: 70px;}
-}
-@keyframes hideProjInfo {
-	0% {height: 600px;}
-	100% {height: 70px;}
+	max-height: 70px;
+    -webkit-transition: max-height 0.5s ease;transition: max-height 0.5s ease;
 }
 
 /* CLASSES TO CONTROL PROJ INFO HEIGHT AND ANIMATION ON ARROW TRANSITION */
 .keepProjInfoOpen {
-	height: 600px;
+	max-height: 1000px;
 }
 
 .keepProjInfoClosed {
-	height: 70px;
+	max-height: 70px;
 }
 /*** END MAIN WRAP ***************************************/
 
