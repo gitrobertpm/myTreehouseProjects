@@ -276,7 +276,8 @@
 								<h2 class="projSectionTitle projSectionTitleAbout">About</h2>
 								<p class="description">I dig movies, so I chose the <b><a href="http://www.omdbapi.com/" target="_blank">OMDB (Open Movie Database)</a></b> website to show off my AJAX/API skills.</p>
 								<p class="description">I went with jQuery for the XHR requests because research said it was the most supported.</p>
-								<p class="description">I picked the movies, made my requests, iterated over the data and styled it appropriately.  I even added in a search feature so you can look up your own favorite movies.  Movie posters are embedded since attempts to load via IMDB URL resulted in a 302 error.</p>
+								<p class="description">I picked the movies, made my requests, iterated over the data and styled it appropriately.  I even added in a search feature so you can look up your own favorite movies.</p>
+								<p class="description">Originally, movie posters were loaded via an IMDB URL that was part of the response object, but doing that over the web is called hotlinking.  It eats bandwidth and here resulted in a 302 error.  So no posters for the search option and all other posters are simply hardcoded.  Bummer.  But still a fun project.</p>
 								<p class="description">Hosted by the awesome folks over at <b><a href="http://github.com" target="_blank">GitHub</a></b>. <span class="smiley">: )</span>  Thanks!</p>
 							</div>
 							<div class="projTechWrap">
