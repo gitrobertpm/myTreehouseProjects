@@ -56,7 +56,6 @@ var myTreehouseProjects = function() {
 		// OPEN AND CLOSE NAV
 		burgerWrap.onclick = function() {
 			if (!navOpen) {
-				nav.classList.toggle("closeNav", false);
 				nav.classList.toggle("openNav", true);
 				
 				burgerPattyText.innerHTML = "Close";
@@ -64,7 +63,6 @@ var myTreehouseProjects = function() {
 				navOpen = true;
 			} else if (navOpen) {
 				nav.classList.toggle("openNav", false);
-				nav.classList.toggle("closeNav", true);
 				
 				burgerPattyText.innerHTML = "";
 				
@@ -88,7 +86,6 @@ var myTreehouseProjects = function() {
 				projWrap[this.marker].classList.toggle("showProjWrap", true);
 				
 				nav.classList.toggle("openNav", false);
-				nav.classList.toggle("closeNav", true);
 				
 				burgerPattyText.innerHTML = "";
 				
