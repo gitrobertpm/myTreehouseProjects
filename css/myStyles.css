@@ -231,6 +231,11 @@ nav h2 {
 	color: rgb(120,180,120);
 }
 
+nav h3 {
+	font-family: 'Dosis', sans-serif;
+	color: rgb(120,180,120);
+}
+
 nav p {
 	color: rgb(245,245,245);
 	margin: 10px auto;
@@ -555,7 +560,7 @@ nav ul li:active, nav ul li:focus, nav ul li:hover {
  PROJECT ANIMATIONS - CLASSES TOGGLED IN myScripts.js
 **********************************************************/
 .openProjInfo {
-	max-height: 1000px;
+	max-height: 1500px;
     -webkit-transition: max-height 0.5s ease;transition: max-height 0.5s ease;
 }
 

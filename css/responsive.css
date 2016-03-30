@@ -86,6 +86,11 @@
 		top: 45px;
 	}
 	
+	.navUL {
+		max-width: 700px;
+		margin: auto;
+	}
+	
 	.navItem {
 		width: 150px;
 	}
