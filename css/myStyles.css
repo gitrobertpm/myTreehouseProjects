@@ -150,7 +150,7 @@ nav {
 	text-align: center;
 	width: 95px;
 	max-width: 1200px;
-	height: 65px;
+	max-height: 65px;
 	margin: 10px auto 0px;
 	margin-left: -47.5px;
 	padding: 5px;
@@ -174,8 +174,7 @@ nav {
 
 .openNav {
 	width: 100%;
-	min-height: 100%;
-	top: -10px;
+	max-height: 2000px;
 	left: 0;
 	margin-left: 0px;
 	background: rgba(50,50,50,.95);
@@ -508,7 +507,6 @@ nav ul li:active, nav ul li:focus, nav ul li:hover {
 	padding-bottom: 20px;
 	background: rgb(247,247,247);
 	overflow: hidden;
-	/* -webkit-transition-duration: .5s;transition-duration: .5s; */
 }
 
 .projInfo {
