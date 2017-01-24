@@ -375,6 +375,11 @@ nav ul li:active, nav ul li:focus, nav ul li:hover {
 	color: rgb(235,245,235);
 }
 
+.projNameDateWrap h2 span {
+	font-family: 'Lato', sans-serif;
+	font-size: 0.7em;
+}
+
 /*********************************************************
  PROJECT IMAGES
 **********************************************************/
