@@ -10,7 +10,7 @@
 **********************************************************/
 @media screen and (min-width: 400px) {	
 	nav {
-		top: 55px;
+		top: 145px;
 	}
 }
 /*** END SMALL SCREENS ***********************************/
@@ -83,7 +83,7 @@
 	 NAV 625px
 	**********************************************************/
 	nav {
-		top: 45px;
+		top: 160px;
 	}
 	
 	.navUL {
@@ -107,6 +107,14 @@
 		padding-right: 25px;
 	}
 	
+	.introHeading {
+		font-size: 2.5em;
+	}
+	
+	.introDesc {
+		max-width: 420px;
+	}
+	
 	.projHeadWrap {
 		background: transparent;
 		border: none;
@@ -114,6 +122,7 @@
 	}
 	
 	.lgProjImage {
+		clear: both;
 		display: block;
 		width: 500px;
 		height: 200px;
@@ -222,11 +231,30 @@
 	}
 	/*** END HEADER ******************************************/
 
+	
+	nav {
+		top: 120px;
+	}
+	
+	.arrow {
+		margin-top: 25px;
+	}
 
 
 	/*********************************************************
 	 MAIN WRAP 1000px
 	**********************************************************/
+	.introHeading {
+		font-size: 3em;
+	}
+	
+	.introDesc {
+		max-width: 850px;
+		border: none;
+		background: none;
+		box-shadow: none;
+	}
+	
 	.projNameDateWrap h2 {
 		font-size: 2em;
 		margin-top: -5px;
@@ -273,7 +301,7 @@
 	 NAV 1250px
 	**********************************************************/
 	nav {
-		top: 45px;
+		top: 120px;
 	}
 	
 	.openNav {

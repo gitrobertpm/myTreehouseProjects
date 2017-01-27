@@ -66,7 +66,8 @@ hr {
 header {
 	padding: 10px 15px 25px;
 	background: -webkit-linear-gradient(top left, rgb(20,80,20), rgb(10,70,10));background: linear-gradient(to bottom right, rgb(20,80,20), rgb(10,70,10));
-	-webkit-filter: drop-shadow(0px 2px 3px rgba(25,25,25,.5));filter: drop-shadow(0px 2px 3px rgba(25,25,25,.5));
+	-webkit-filter: drop-shadow(0px 2px 3px rgba(25,25,25,0.5));filter: drop-shadow(0px 2px 3px rgba(25,25,25,0.5));
+	box-shadow: 2px 2px 3px rgba(50,50,50,0.5);
 }
 
 .headerInnerWrap {
@@ -82,8 +83,8 @@ header {
 	padding: 5px;
 	margin-top: 5px;
 	background: rgb(250,250,250);
-	box-shadow: 2px 2px 3px rgba(50,50,50,.5);
-	-webkit-filter: drop-shadow(2px 2px 5px rgba(50,50,50,.5));filter: drop-shadow(2px 2px 5px rgba(50,50,50,.5));
+	box-shadow: 2px 2px 3px rgba(50,50,50,0.5);
+	-webkit-filter: drop-shadow(2px 2px 5px rgba(50,50,50,0.5));filter: drop-shadow(2px 2px 5px rgba(50,50,50,0.5));
 }
 
 header h1 {
@@ -93,7 +94,7 @@ header h1 {
 	color: rgb(250,250,250);
 	margin: 10px auto 15px;
 	padding-left: 10px;
-	-webkit-filter: drop-shadow(4px 4px 5px rgba(75,75,75,.7));filter: drop-shadow(4px 4px 5px rgba(75,75,75,.7));
+	-webkit-filter: drop-shadow(4px 4px 5px rgba(75,75,75,0.7));filter: drop-shadow(4px 4px 5px rgba(75,75,75,0.7));
 }
 
 .whoWrap {
@@ -101,8 +102,8 @@ header h1 {
 	padding: 7px;
 	background: -webkit-linear-gradient(top left, rgb(70,130,70), rgb(60,120,60));background: linear-gradient(to bottom right, rgb(70,130,70), rgb(60,120,60));
 	border: 1px solid rgba(50,50,50,0.5);
-	border-Top: 1px solid rgba(150,150,150,.5);
-	box-shadow: 2px 2px 3px rgba(50,50,50,.5);
+	border-Top: 1px solid rgba(150,150,150,0.5);
+	box-shadow: 2px 2px 3px rgba(50,50,50,0.5);
 }
 
 .whoWrap h2 {
@@ -139,13 +140,14 @@ header h1 {
  NAV
 **********************************************************/
 .navWrap {
+	position: realtive;
 	max-width: 1250px;
 	margin: 10px auto;
 }
 
 nav {
 	position: absolute;
-	top: 80px;
+	top: 150px;
 	left: 50%;
 	text-align: center;
 	width: 95px;
@@ -345,6 +347,36 @@ nav ul li:active, nav ul li:focus, nav ul li:hover {
 	color: rgb(162,139,135);
 }
 
+.introHeading,
+.introDesc {
+	text-align: center;
+}
+
+.introHeading {
+	font-family: 'Dosis', sans-serif;
+	font-size: 1.4em;
+	color: rgb(20,80,20);
+}
+
+.introDesc {
+	border: 1px solid rgba(100,100,100,0.5);
+	border-radius: 3px;
+	box-shadow: 3px 3px 5px rgba(50,50,50,0.7);
+	margin: 7px auto;
+	padding: 7px 5px 10px;
+	max-width: 275px;
+	background: -webkit-linear-gradient(top left, rgba(120,180,120,0.5), rgba(110,170,110,0.5));background: linear-gradient(to bottom right, rgba(120,180,120,0.5), rgba(110,170,110,0.5));
+}
+
+.introDesc a {
+	color: rgb(72,49,45);
+	white-space: nowrap;
+}
+
+.introDesc a:hover {
+	color: rgba(20,80,20, 0.5);
+}
+
 .projWrap {
 	display: none;
 	padding: 10px;
@@ -423,6 +455,7 @@ nav ul li:active, nav ul li:focus, nav ul li:hover {
 	-webkit-filter: drop-shadow(0px 2px 3px rgba(50,50,50,.7));filter: drop-shadow(0px 2px 3px rgba(50,50,50,.7));
 	cursor: pointer;
 	-webkit-transition: .25s ease-out;transition: .25s ease-out;
+	outline: none;
 }
 
 .projTrigger:active, .projTrigger:hover {

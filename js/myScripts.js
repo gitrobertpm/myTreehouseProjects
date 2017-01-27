@@ -114,7 +114,7 @@ var myTreehouseProjects = function() {
 				arrowWrap[0].classList.toggle("arrowFixed", false);
 				arrowWrap[1].classList.toggle("arrowFixed", false);
 			}
-		} else if (width > 400) {
+		} else if (width > 400 && width < 1000) {
 		if (distance > 300 || distance2 > 300) {
 				arrowWrap[0].classList.toggle("arrowFixed", true);
 				arrowWrap[1].classList.toggle("arrowFixed", true);
